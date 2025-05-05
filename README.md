@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Background Image</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            transition: background-image 0.5s ease;
+            background-size: cover;
+            background-position: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleBackground()">Change Background</button>
+
+    <script>
+        const images = [
+            "your-image1.jpg", 
+            "your-image2.jpg"
+        ];
+        let currentImageIndex = 0;
+
+        function toggleBackground() {
+            currentImageIndex = 1 - currentImageIndex;
+            document.body.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        }
+    </script>
+
+</body>
+</html>
